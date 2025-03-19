@@ -14,3 +14,6 @@ npm start
 
 Open the browser and go to:
 http://localhost:3000
+
+DEPLOYED ON VERCEL
+https://ui-ux-design-six.vercel.app/
