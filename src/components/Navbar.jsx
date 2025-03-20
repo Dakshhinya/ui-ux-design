@@ -6,9 +6,8 @@ function Navbar() {
     categories: [],
     icons: {}
   });
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  
+  const [isLoading,setIsLoading] = useState(true);
+  const [error,setError] = useState(null);
   const scrollContainerRef = useRef(null);
   useEffect(() => {
     fetch("/source.json") 
@@ -28,13 +27,13 @@ function Navbar() {
       });
     }
   };
-  if (isLoading) {
-    return <div className="flex justify-center items-center h-16">Loading...</div>;
-  }
+  // if (isLoading) {
+  //   return <div className="flex justify-center items-center h-16">Loading...</div>;
+  // }
 
-  if (error) {
-    return <div className="flex justify-center items-center h-16 text-red-600">Error: {error}</div>;
-  }
+  // if (error) {
+  //   return <div className="flex justify-center items-center h-16 text-red-600">Error: {error}</div>;
+  // }
 
   return (
     <div className="flex flex-col">
@@ -46,7 +45,7 @@ function Navbar() {
             <div className="hidden md:flex lg:hidden items-center gap-2 max-w-full overflow-x-auto">
               {data.categories.map((category, index) => (
                 <a 
-                  key={index} 
+                  key={index}
                   href="/" 
                   className={`${category.active ? "text-red-700" : "text-gray-700"} whitespace-nowrap text-sm px-2`}
                 >
@@ -59,8 +58,7 @@ function Navbar() {
                 <a 
                   key={index} 
                   href="/" 
-                  className={category.active ? "text-red-700" : "text-gray-700"}
-                >
+                  className={category.active ? "text-red-700" : "text-gray-700"}>
                   {category.name}
                 </a>
               ))}
@@ -69,17 +67,14 @@ function Navbar() {
 
           <div className="flex items-center gap-2">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                 dangerouslySetInnerHTML={{ __html: data.icons.search }}
-            />
+                 dangerouslySetInnerHTML={{ __html: data.icons.search }}/>
 
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                 dangerouslySetInnerHTML={{ __html: data.icons.cart }}
-            />
+                 dangerouslySetInnerHTML={{ __html: data.icons.cart }}/>
 
             <div className="hidden md:block">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                   dangerouslySetInnerHTML={{ __html: data.icons.user }}
-              />
+                   dangerouslySetInnerHTML={{ __html: data.icons.user }}/>
             </div>
             
             <button className="md:hidden focus:outline-none" onClick={() => setIsOpen(!isOpen)}>
@@ -111,8 +106,7 @@ function Navbar() {
         
         <div 
           ref={scrollContainerRef}
-          className="flex overflow-x-auto no-scrollbar px-10 py-4 space-x-6 scrollbar-hide"
-        >
+          className="flex overflow-x-auto no-scrollbar px-10 py-4 space-x-6 scrollbar-hide">
           {data.categories.map((category, index) => (
             <div key={index} className="flex-none flex flex-col items-center">
               <div className={`w-16 h-16 rounded-full overflow-hidden border-2 ${category.active ? 'border-red-600' : 'border-gray-200'}`}>

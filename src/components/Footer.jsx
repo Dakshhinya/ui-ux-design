@@ -88,7 +88,7 @@ function Footer() {
     icons: {},
     footerLinks: [],
     socialIcons: [],
-    contactInfo: { address: [], email: "", phone: "" }, // Default values
+    contactInfo: { address: [], email: "", phone: "" }, 
   });
 
   useEffect(() => {
@@ -130,14 +130,11 @@ function Footer() {
         </div>
 
         <div className="bg-[#333333] flex flex-col md:flex-row h-full md:h-full w-full items-center justify-around px-10 gap-6 md:gap-0 pb-10 pt-10">
-          {/* Footer Links */}
           <div className="text-white flex flex-col items-center md:items-start mt-5 gap-6 md:gap-7">
             {data.footerLinks?.map((link, index) => (
               <p key={index}>{link}</p>
             ))}
           </div>
-
-          {/* Social Icons */}
           <div className="flex flex-col items-center py-7">
             <h1 className="text-2xl text-white bg-red-600 px-4 py-2 h-16">
               MADE UP
@@ -157,8 +154,6 @@ function Footer() {
               ))}
             </div>
           </div>
-
-          {/* Contact Info */}
           <div className="flex flex-col items-center md:items-end leading-6 text-white py-5">
             <p className="font-semibold">Our Corporate Office</p>
             {data.contactInfo?.address?.map((line, index) => (

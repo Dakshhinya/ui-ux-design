@@ -39,6 +39,7 @@
       "text1": "Stain-free denim shirts"
     }
   ],
+
   "home": {
     "src": "imgg.jpg",
     "alt": "Banner",
@@ -46,6 +47,7 @@
     "text2": "for men who aspire",
     "buttonText": "Browse Collection"
   },
+  
   "latestCollections": [
     { "src": "pant.jpg", "name": "Printed Polo T-Shirt", "price": "₹1499.00" },
     { "src": "imgg.jpg", "name": "Printed Polo T-Shirt", "price": "₹1499.00" },
