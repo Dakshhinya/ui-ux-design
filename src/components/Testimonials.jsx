@@ -14,7 +14,7 @@ function Testimonials() {
         return (
             <div className="flex mt-2">
                 {Array.from({ length: count }).map((_, index) => (
-                    <svg key={index} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg key={index} width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M8 1L10 6H15L11 9L12 14L8 11L4 14L5 9L1 6H6L8 1Z" fill="#FDC02F" />
                     </svg>
                 ))}

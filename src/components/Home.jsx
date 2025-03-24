@@ -48,7 +48,7 @@ function Home() {
           <p>{banner.text1.split(" ")[0]} {banner.text1.split(" ")[1]}<span className="text-red-600"> {banner.text1.split(" ")[2]}</span></p>
         </div>
         
-        <div className="absolute top-[57%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white h-[40px] w-[175px] flex items-center justify-center">
+        <div className="absolute top-[60%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white h-[40px] w-[175px] flex items-center justify-center">
           <p>{banner.text2.split(" ")[0]} {banner.text2.split(" ")[1]} {banner.text2.split(" ")[2]}  <span className="text-red-600">{banner.text2.split(" ")[3]}</span></p>
         </div>
         

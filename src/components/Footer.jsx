@@ -58,19 +58,21 @@ function Footer() {
               MADE UP
             </h1>
             <p className="mt-3 text-white">Stay in touch with us</p>
-            <div className="mt-2 gap-3 flex">
-              {data.socialIcons?.map((icon, index) => (
-                <svg
-                  key={index}
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  dangerouslySetInnerHTML={{ __html: icon}}
-                />
-
-              ))}
+            <div className="mt-2 gap-4 flex">
+              
+              <svg width="35" height="35" viewBox="0 0 35 35" fill="white">
+                  <path d={data.socialIcons.facebook}/>
+              </svg>
+              <svg width="35" height="35" viewBox="0 0 35 35" fill="white">
+              {data?.socialIcons?.instagram?.map((d,index)=>(
+                  <path key={index} d={d}/>
+                ))}
+              </svg>
+              <svg width="35" height="35" viewBox="0 0 35 35" fill="white">
+                {data?.socialIcons?.youtube?.map((d,index)=>(
+                  <path key={index} d={d}/>
+                ))}
+              </svg>
             </div>
           </div>
           <div className="flex flex-col items-center md:items-end leading-6 text-white py-5">
@@ -81,26 +83,18 @@ function Footer() {
             <br />
             <div className="flex flex-row gap-2 mt-1">
               <svg
-                className="mt-2"
-                width="18"
-                height="14"
-                viewBox="0 0 14 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                dangerouslySetInnerHTML={{ __html: data.icons.email}}
-              />
+                className="mt-2" width="18" height="14" viewBox="0 0 14 10" fill="black">
+                  <path d={data.socialIcons?.email || "NA"}/>
+                </svg>
+              
               <p>{data.contactInfo?.email || "Not Available"}</p>
             </div>
             <div className="flex flex-row gap-3 mt-3">
-              <svg
-                className="mt-1"
-                width="18"
-                height="14"
-                viewBox="0 0 13 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                dangerouslySetInnerHTML={{ __html: data.icons.phone}}
-              />
+
+              <svg className="mt-1" width="18" height="14" viewBox="0 0 13 14"fill="black">
+                <path d={data.icons?.phone || "NA"}/>
+              </svg>
+                
               <p>{data.contactInfo?.phone || "Not Available"}</p>
             </div>
           </div>
